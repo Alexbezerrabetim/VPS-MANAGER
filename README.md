@@ -1,21 +1,16 @@
 __VPS-MANAGER__
 
-```wget https://raw.githubusercontent.com/fabricio94b/VPS-MANAGER/main/Install/tcptweaker.sh; chmod +x tcptweaker.sh; ./tcptweaker.sh```
+__Recomendado__
+- Ubuntu 14
+- Ubuntu 16
+- Ubuntu 18
 
-__Você precisa criar um bot no [@botfather](https://t.me/botfather) para fazer a instalação__
+__Instalar apenas o SCRIPT__
 
-Instalação simples, apenas execute esse codigo a sua vps para que o seu bot começe a funcionar, durante a instalação será preciso fornescer algumas informações que o bot ira precisar.
+```wget https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/SSHPLUS-MANAGER-FREE/master/Plus; chmod 777 Plus; ./Plus```
 
-```wget https://raw.githubusercontent.com/fabricio94b/SSH-FREE/main/iniciar.sh -O iniciar.sh; chmod +x iniciar.sh; ./iniciar.sh```
+__Instalar o SCRIPT e atualizar ferramentas do sistema__
 
-Caso faça alguma alteração no bot será preciso reinicia-lo usando ```./iniciar.sh```
+```apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/SSHPLUS-MANAGER-FREE/master/Plus; chmod 777 Plus; ./Plus```
 
-Com esse script você terá um bot de contas SSH gratís e funçional.
 
-__Pacotes nescessarios:__
-- php
-- php-curl
-- php-redis
-- redis-server
-- screen
-- zip
