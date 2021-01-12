@@ -1,6 +1,6 @@
 __VPS-MANAGER__
 
-```wget https://raw.githubusercontent.com/fabricio94b/VPS-MANAGER/master/Install/tcptweaker.sh; chmod +x tcptweaker.sh; ./tcptweaker.sh```
+```wget https://raw.githubusercontent.com/fabricio94b/VPS-MANAGER/main/Install/tcptweaker.sh; chmod +x tcptweaker.sh; ./tcptweaker.sh```
 
 __Você precisa criar um bot no [@botfather](https://t.me/botfather) para fazer a instalação__
 
