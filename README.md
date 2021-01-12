@@ -7,10 +7,10 @@ __Recomendado__
 
 __Instalar apenas o SCRIPT__
 
-```wget https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/SSHPLUS-MANAGER-FREE/master/Plus; chmod 777 Plus; ./Plus```
+```wget https://raw.githubusercontent.com/fabricio94b/VPS-MANAGER/master/Plus; chmod 777 Plus; ./Plus```
 
 __Instalar o SCRIPT e atualizar ferramentas do sistema__
 
-```apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/SSHPLUS-MANAGER-FREE/master/Plus; chmod 777 Plus; ./Plus```
+```apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/fabricio94b/VPS-MANAGER/master/Plus; chmod 777 Plus; ./Plus```
 
 
