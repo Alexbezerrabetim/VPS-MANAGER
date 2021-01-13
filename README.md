@@ -5,7 +5,7 @@ __Recomendado__
 - Ubuntu 16
 - Ubuntu 18
 
-![logo](https://github.com/fabricio94b/VPS-MANAGER/main/home.png)
+![logo](https://github.com/fabricio94b/VPS-MANAGER/blob/main/home.png)
 
 __Instalar apenas o SCRIPT__
 
