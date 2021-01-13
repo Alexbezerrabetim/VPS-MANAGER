@@ -5,7 +5,7 @@ __Recomendado__
 - Ubuntu 16
 - Ubuntu 18
 
-![logo](https://github.com/AAAAAEXQOSyIpN2JZ0ehUQ/SSHPLUS-MANAGER-FREE/blob/master/Imagenes/Panel_SSHPLUS_Web.jpg)
+![logo](https://github.com/fabricio94b/VPS-MANAGER/main/home.png)
 
 __Instalar apenas o SCRIPT__
 
