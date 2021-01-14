@@ -16,7 +16,7 @@ TIMEOUT = 60
 DEFAULT_HOST = '0.0.0.0:22'
 
 MSG = 'NET4G+'
-COR = '<font color="orange">'
+COR = '<font color="#ffa500">'
 FTAG = '</font>'
 RESPONSE = "HTTP/1.1 200 " + str(COR) + str(MSG) + str(FTAG) + "\r\n\r\n"
 
