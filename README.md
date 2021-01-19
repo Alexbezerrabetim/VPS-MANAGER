@@ -13,6 +13,6 @@ __Instalar o SCRIPT e atualizar pacotes do sistema__
 
 ```apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/fabricio94b/VPS-MANAGER/main/Plus; chmod 777 Plus; ./Plus```
 
-![logo](https://github.com/fabricio94b/VPS-MANAGER/blob/main/home.png)
+![logo](https://github.com/fabricio94b/VPS-MANAGER/blob/main/inicio.png)
 
 
