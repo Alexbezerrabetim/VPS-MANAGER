@@ -14,11 +14,10 @@ PASS = ''
 BUFLEN = 8196 * 8
 TIMEOUT = 60
 DEFAULT_HOST = '0.0.0.0:22'
-
 MSG = 'NET4G+'
-COR = '<font color="#ffa500">'
+COR = '<font color="#ffba00">'
 FTAG = '</font>'
-RESPONSE = "HTTP/1.1 200 " + str(COR) + str(MSG) + str(FTAG) + "\r\n\r\n"
+RESPONSE = "HTTP/1.1 200 - " + str(COR) + str(MSG) + str(FTAG) + "\r\n\r\n"
 
  
 class Server(threading.Thread):
