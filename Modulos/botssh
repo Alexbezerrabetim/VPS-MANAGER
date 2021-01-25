@@ -1,11 +1,7 @@
 #!/bin/bash
-#====================================================
-#	SCRIPT: BOT NET4G+ MANAGER
-#	DESENVOLVIDO POR:	CRAZY_VPN
-#	CONTATO TELEGRAM:	https://t.me/NET4G_PRO
-#====================================================
+
 clear
-[[ $(awk -F" " '{print $2}' /usr/lib/licence) != "@CRAZY_VPN" ]] && exit 0
+[[ $(awk -F" " '{print $2}' /usr/lib/licence) != "@NET4G_PRO" ]] && exit 0
 fun_bar() {
     comando[0]="$1"
     comando[1]="$2"

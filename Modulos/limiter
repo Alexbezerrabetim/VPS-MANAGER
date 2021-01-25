@@ -1,9 +1,5 @@
 #!/bin/bash
-#====================================================
-#	SCRIPT: LIMITER SSHPLUS MANAGER
-#	DESENVOLVIDO POR:	CRAZY_VPN
-#	CONTATO TELEGRAM:	https://t.me/NET4G_PRO
-#====================================================
+
 clear
 database="/root/usuarios.db"
 fun_multilogin() {

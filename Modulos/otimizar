@@ -1,10 +1,5 @@
 #!/bin/bash
-#===================================================
-#	SCRIPT: OTIMIZAR	SSHPLUS MANAGER
-#	DESENVOLVIDO POR:	CRAZY_VPN
-#	CONTATO TELEGRAM:	https://t.me/NET4G_PRO
 
-#===================================================
 fun_bar() {
 	comando[0]="$1"
 	comando[1]="$2"
