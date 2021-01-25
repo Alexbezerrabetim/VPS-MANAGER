@@ -3,8 +3,7 @@
 #	SCRIPT: CONEXAO SSHPLUS MANAGER
 #	DESENVOLVIDO POR:	CRAZY_VPN
 #	DATA ATUALIZACAO:	28 DEZ 2020 
-#	CONTATO TELEGRAM:	http://t.me/crazy_vpn
-#	CANAL TELEGRAM:	http://t.me/sshplus
+#	CONTATO TELEGRAM:	https://t.me/NET4G_PRO
 #====================================================
 [[ $(awk -F" " '{print $2}' /usr/lib/licence) == "@CRAZY_VPN" ]] && {
 	ram1=$(free -h | grep -i mem | awk {'print $2'})

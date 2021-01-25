@@ -2,8 +2,7 @@
 #====================================================
 #	SCRIPT: LIMITER SSHPLUS MANAGER
 #	DESENVOLVIDO POR:	CRAZY_VPN
-#	CONTATO TELEGRAM:	http://t.me/crazy_vpn
-#	CANAL TELEGRAM:	http://t.me/sshplus
+#	CONTATO TELEGRAM:	https://t.me/NET4G_PRO
 #====================================================
 clear
 database="/root/usuarios.db"

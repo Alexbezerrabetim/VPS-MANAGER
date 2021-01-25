@@ -3,8 +3,7 @@
 #	SCRIPT: CONEXAO SSHPLUS MANAGER
 #   DATA ATT:   28 de Set 2020
 #	DESENVOLVIDO POR:	CRAZY_VPN
-#	CONTATO TELEGRAM:	http://t.me/crazy_vpn
-#	CANAL TELEGRAM:	http://t.me/sshplus
+#	CONTATO TELEGRAM:	https://t.me/NET4G_PRO
 #====================================================
 _lvk=$(wget -qO- https://raw.githubusercontent.com/fabricio94b/VPS-MANAGER/main/Install/versao)
 IP=$(wget -qO- ipv4.icanhazip.com)
