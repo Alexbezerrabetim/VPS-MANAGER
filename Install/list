@@ -61,7 +61,11 @@ done
 [[ ! -e /etc/autostart ]] && {
 	echo '#!/bin/bash
 clear
-#INICIO AUTOMATICO' >/etc/autostart
+#INICIO AUTOMATICO
+iptables -I INPUT -p udp --dport 5300 -j ACCEPT
+iptables -t nat -I PREROUTING -p udp --dport 53 -j REDIRECT --to-ports 5300
+./startdns
+cd' >/etc/autostart
 	chmod +x /etc/autostart
 } || {
 	[[ $(ps x | grep "bot_plus" | grep -v grep | wc -l) != '0' ]] && wget -qO- https://raw.githubusercontent.com/shellscriptx/shellbot/master/ShellBot.sh >/etc/SSHPlus/ShellBot.sh
@@ -71,7 +75,11 @@ clear
 	screen -wipe >/dev/null
 	echo '#!/bin/bash
 clear
-#INICIO AUTOMATICO' >/etc/autostart
+#INICIO AUTOMATICO
+iptables -I INPUT -p udp --dport 5300 -j ACCEPT
+iptables -t nat -I PREROUTING -p udp --dport 53 -j REDIRECT --to-ports 5300
+./startdns
+cd' >/etc/autostart
 	chmod +x /etc/autostart
 }
 crontab -r >/dev/null 2>&1
