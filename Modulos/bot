@@ -1,6 +1,6 @@
 #!/bin/bash
 #===================================================
-#	SCRIPT: BOT VPS MANAGER
+#	SCRIPT: BOT SSHPLUS MANAGER
 #   DATA ATT:   28 de Dez 2020
 #	DESENVOLVIDO POR:	CRAZY_VPN
 #   API SHELLBOT:   SHAMAN
@@ -885,7 +885,7 @@ backup_users() {
 sobremim() {
     local msg
     msg="=×=×=×=×=×=×=×=×=×=×=×=×=×=\n"
-    msg+="<b>🤖 BOT VPS MANAGER 🤖</b>\n"
+    msg+="<b>🤖 BOT SSHPLUS MANAGER 🤖</b>\n"
     msg+="=×=×=×=×=×=×=×=×=×=×=×=×=×=\n\n"
     msg+="<b>Desenvolvido por:</b> @crazy_vpn\n"
     msg+="<b>Canal Oficial:</b> @SSHPLUS\n\n"
