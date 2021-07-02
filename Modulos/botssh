@@ -1,9 +1,6 @@
 #!/bin/bash
 #====================================================
-#	SCRIPT: BOTSSH VPS MANAGER
-#	
-#	
-#	
+#	SCRIPT: BOTSSH VPS MANAGER	
 #====================================================
 clear
 [[ $(awk -F" " '{print $2}' /usr/lib/licence) != "@vps_manager" ]] && exit 0

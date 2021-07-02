@@ -1,11 +1,8 @@
 #!/bin/bash
 #====================================================
 #	SCRIPT: CONEXAO VPS MANAGER
-#	
 #	DATA ATUALIZACAO:	28 DEZ 2020 
-#	
-#	
-#====================================================
+====================================================
 [[ $(awk -F" " '{print $2}' /usr/lib/licence) == "@vps_manager" ]] && {
 	ram1=$(free -h | grep -i mem | awk {'print $2'})
 	ram2=$(free -h | grep -i mem | awk {'print $4'})

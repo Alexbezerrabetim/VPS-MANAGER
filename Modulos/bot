@@ -3,9 +3,7 @@
 #	SCRIPT: BOT VPS MANAGER
 #   DATA ATT:   28 de Dez 2020
 #   API SHELLBOT:   SHAMAN
-#	
-#	
-#===================================================
+===================================================
 [[ ! -d /etc/VPSManager ]] && exit 0
 [[ ! -d /etc/bot ]] && exit 0
 source ShellBot.sh

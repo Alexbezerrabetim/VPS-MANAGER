@@ -1,9 +1,6 @@
 #!/bin/bash
 #====================================================
-#	SCRIPT: LIMITER VPS MANAGER
-#	
-#	
-#	
+#	SCRIPT: LIMITER VPS MANAGER	
 #====================================================
 clear
 database="/root/usuarios.db"
