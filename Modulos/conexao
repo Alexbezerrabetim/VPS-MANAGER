@@ -1,10 +1,10 @@
 #!/bin/bash
 #====================================================
 #	SCRIPT: CONEXAO VPS MANAGER
-#	DESENVOLVIDO POR:	CRAZY_VPN
+#	
 #	DATA ATUALIZACAO:	28 DEZ 2020 
-#	CONTATO TELEGRAM:	http://t.me/crazy_vpn
-#	CANAL TELEGRAM:	http://t.me/sshplus
+#	
+#	
 #====================================================
 [[ $(awk -F" " '{print $2}' /usr/lib/licence) == "@CRAZY_VPN" ]] && {
 	ram1=$(free -h | grep -i mem | awk {'print $2'})
@@ -17,7 +17,7 @@
 		comando[1]="$2"
 		(
 			[[ -e $HOME/fim ]] && rm $HOME/fim
-			[[ ! -d /etc/SSHPlus ]] && rm -rf /bin/menu
+			[[ ! -d /etc/VPSManager ]] && rm -rf /bin/menu
 			${comando[0]} >/dev/null 2>&1
 			${comando[1]} >/dev/null 2>&1
 			touch $HOME/fim
@@ -153,7 +153,7 @@
 				acl url1 dstdomain -i 127.0.0.1
 				acl url2 dstdomain -i localhost
 				acl url3 dstdomain -i $ipdovps
-				acl url4 dstdomain -i /SSHPLUS?
+				acl url4 dstdomain -i /VPS?
 				acl payload url_regex -i "$var_pay"
 				acl all src 0.0.0.0/0
 
@@ -172,7 +172,7 @@
 			done
 			cat <<-EOF >>$var_sqd
 				#Nome squid
-				visible_hostname SSHPLUS 
+				visible_hostname VPS 
 				via off
 				forwarded_for off
 				pipeline_prefetch off
@@ -1083,7 +1083,7 @@
 				./easyrsa --batch build-ca nopass
 				./easyrsa gen-dh
 				./easyrsa build-server-full server nopass
-				./easyrsa build-client-full SSHPLUS nopass
+				./easyrsa build-client-full VPS nopass
 				./easyrsa gen-crl
 				cp pki/ca.crt pki/private/ca.key pki/dh.pem pki/issued/server.crt pki/private/server.key /etc/openvpn/easy-rsa/pki/crl.pem /etc/openvpn
 				chown nobody:$GROUPNAME /etc/openvpn/crl.pem
@@ -1219,13 +1219,13 @@ exit 0' >$RCLOCAL
 				IP="$IP2"
 			fi
 			cat <<-EOF >/etc/openvpn/client-common.txt
-				# OVPN_ACCESS_SERVER_PROFILE=[SSHPLUS]
+				# OVPN_ACCESS_SERVER_PROFILE=[VPS]
 				client
 				dev tun
 				proto $PROTOCOL
 				sndbuf 0
 				rcvbuf 0
-				remote /SSHPLUS? $porta
+				remote /VPS? $porta
 				#payload "CONNECT 127.0.0.1:1194[split][crlf] HTTP/1.0 [crlf][crlf]#"
 				http-proxy $IP 80
 				resolv-retry 5
@@ -1243,7 +1243,7 @@ exit 0' >$RCLOCAL
 				float
 			EOF
 			# gerar client.ovpn
-			newclient "SSHPLUS"
+			newclient "VPS"
 			[[ "$(netstat -nplt | grep -wc 'openvpn')" != '0' ]] && echo -e "\n\033[1;32mOPENVPN INSTALADO COM SUCESSO\033[0m" || echo -e "\n\033[1;31mERRO ! A INSTALACAO CORROMPEU\033[0m"
 		}
 		sed -i '$ i\echo 1 > /proc/sys/net/ipv4/ip_forward' /etc/rc.local
@@ -1317,12 +1317,12 @@ exit 0' >$RCLOCAL
 				verif_ptrs $porta
 				fun_inisocks() {
 					sleep 1
-					screen -dmS proxy python /etc/SSHPlus/proxy.py $porta
+					screen -dmS proxy python /etc/VPSManager/proxy.py $porta
 					[[ $(grep -wc "proxy.py" /etc/autostart) = '0' ]] && {
-						echo -e "netstat -tlpn | grep -w $porta > /dev/null || screen -dmS proxy python /etc/SSHPlus/proxy.py $porta" >>/etc/autostart
+						echo -e "netstat -tlpn | grep -w $porta > /dev/null || screen -dmS proxy python /etc/VPSManager/proxy.py $porta" >>/etc/autostart
 					} || {
 						sed -i '/proxy.py/d' /etc/autostart
-						echo -e "netstat -tlpn | grep -w $porta > /dev/null || screen -dmS proxy python /etc/SSHPlus/proxy.py $porta" >>/etc/autostart
+						echo -e "netstat -tlpn | grep -w $porta > /dev/null || screen -dmS proxy python /etc/VPSManager/proxy.py $porta" >>/etc/autostart
 					}
 				}
 				echo ""
@@ -1372,17 +1372,17 @@ exit 0' >$RCLOCAL
 				verif_ptrs $porta
 				fun_inisocksop() {
 					[[ "$(netstat -tlpn | grep 'openvpn' | wc -l)" != '0' ]] && {
-						listoldop=$(grep -w 'DEFAULT_HOST =' /etc/SSHPlus/open.py | cut -d"'" -f2 | cut -d: -f2)
+						listoldop=$(grep -w 'DEFAULT_HOST =' /etc/VPSManager/open.py | cut -d"'" -f2 | cut -d: -f2)
 						listopen=$(netstat -tlpn | grep -w openvpn | grep -v 127.0.0.1 | awk {'print $4'} | cut -d: -f2)
-						sed -i "s/$listoldop/$listopen/" /etc/SSHPlus/open.py
+						sed -i "s/$listoldop/$listopen/" /etc/VPSManager/open.py
 					}
 					sleep 1
-					screen -dmS openpy python /etc/SSHPlus/open.py $porta
+					screen -dmS openpy python /etc/VPSManager/open.py $porta
 					[[ $(grep -wc "open.py" /etc/autostart) = '0' ]] && {
-						echo -e "netstat -tlpn | grep -w $porta > /dev/null || screen -dmS openpy python /etc/SSHPlus/open.py $porta" >>/etc/autostart
+						echo -e "netstat -tlpn | grep -w $porta > /dev/null || screen -dmS openpy python /etc/VPSManager/open.py $porta" >>/etc/autostart
 					} || {
 						sed -i '/open.py/d' /etc/autostart
-						echo -e "netstat -tlpn | grep -w $porta > /dev/null || screen -dmS openpy python /etc/SSHPlus/open.py $porta" >>/etc/autostart
+						echo -e "netstat -tlpn | grep -w $porta > /dev/null || screen -dmS openpy python /etc/VPSManager/open.py $porta" >>/etc/autostart
 					}
 				}
 				echo ""
@@ -1417,7 +1417,7 @@ exit 0' >$RCLOCAL
 				echo ""
 				abrirptsks() {
 					sleep 1
-					screen -dmS proxy python /etc/SSHPlus/proxy.py $porta
+					screen -dmS proxy python /etc/VPSManager/proxy.py $porta
 					sleep 1
 				}
 				fun_bar 'abrirptsks'
@@ -1434,7 +1434,7 @@ exit 0' >$RCLOCAL
 		elif [[ "$resposta" = '4' ]]; then
 			if ps x | grep -w proxy.py | grep -v grep 1>/dev/null 2>/dev/null; then
 				clear
-				msgsocks=$(cat /etc/SSHPlus/proxy.py | grep -E "MSG =" | awk -F = '{print $2}' | cut -d "'" -f 2)
+				msgsocks=$(cat /etc/VPSManager/proxy.py | grep -E "MSG =" | awk -F = '{print $2}' | cut -d "'" -f 2)
 				echo -e "\E[44;1;37m             PROXY SOCKS              \E[0m"
 				echo ""
 				echo -e "\033[1;33mSTATUS: \033[1;32m$msgsocks"
@@ -1485,11 +1485,11 @@ exit 0' >$RCLOCAL
 					cor_sts='null'
 				fi
 				fun_msgsocks() {
-					msgsocks2=$(cat /etc/SSHPlus/proxy.py | grep "MSG =" | awk -F = '{print $2}')
-					sed -i "s/$msgsocks2/ '$msgg'/g" /etc/SSHPlus/proxy.py
+					msgsocks2=$(cat /etc/VPSManager/proxy.py | grep "MSG =" | awk -F = '{print $2}')
+					sed -i "s/$msgsocks2/ '$msgg'/g" /etc/VPSManager/proxy.py
 					sleep 1
-					cor_old=$(grep 'color=' /etc/SSHPlus/proxy.py | cut -d '"' -f2)
-					sed -i "s/\b$cor_old\b/$cor_sts/g" /etc/SSHPlus/proxy.py
+					cor_old=$(grep 'color=' /etc/VPSManager/proxy.py | cut -d '"' -f2)
+					sed -i "s/\b$cor_old\b/$cor_sts/g" /etc/VPSManager/proxy.py
 
 				}
 				echo ""
@@ -1505,7 +1505,7 @@ exit 0' >$RCLOCAL
 						screen -wipe >/dev/null
 						_Ptsks="$(cat /tmp/Pt_sks)"
 						sleep 1
-						screen -dmS proxy python /etc/SSHPlus/proxy.py $_Ptsks
+						screen -dmS proxy python /etc/VPSManager/proxy.py $_Ptsks
 						rm /tmp/Pt_sks
 					fi
 				}
@@ -1661,7 +1661,7 @@ exit 0' >$RCLOCAL
 	x="ok"
 	fun_conexao() {
 		while true $x != "ok"; do
-			[[ ! -e '/home/sshplus' ]] && exit 0
+			[[ ! -e '/home/vps' ]] && exit 0
 			clear
 			echo -e "\E[44;1;37m                MODO DE CONEXAO                 \E[0m\n"
 			echo -e "\033[1;32mSERVICO: \033[1;33mOPENSSH \033[1;32mPORTA: \033[1;37m$(grep 'Port' /etc/ssh/sshd_config | cut -d' ' -f2 | grep -v 'no' | xargs)" && sts6="\033[1;32m◉ "
