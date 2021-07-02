@@ -6,7 +6,7 @@
 #	
 #====================================================
 clear
-[[ $(awk -F" " '{print $2}' /usr/lib/licence) != "@CRAZY_VPN" ]] && exit 0
+[[ $(awk -F" " '{print $2}' /usr/lib/licence) != "@vps_manager" ]] && exit 0
 fun_bar() {
     comando[0]="$1"
     comando[1]="$2"

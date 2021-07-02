@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # encoding: utf-8
-# VPS By @Crazy_vpn
+# VPS By @vps_manager
 import socket, threading, thread, select, signal, sys, time
 from os import system
 system("clear")
