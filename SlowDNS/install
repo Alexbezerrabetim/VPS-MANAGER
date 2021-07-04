@@ -68,7 +68,7 @@ sudo systemctl enable systemd-resolved.service && sudo systemctl start systemd-r
 sleep 2
 }
 fun_bar 'fun_dnscf'
-clear
-slowdns
 cd
 rm install
+clear
+slowdns
