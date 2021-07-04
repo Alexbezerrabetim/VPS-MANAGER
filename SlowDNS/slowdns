@@ -49,49 +49,49 @@ echo -e "\033[0;36m#===================================================#\033[m"
 
 Opcao1 () {
     clear
-    bash /etc/slowdns/slowdns-ssh
+    bash /etc/VPSManager/SlowDNS/slowdns-ssh
 }
 
 Opcao2 () {
     clear
-    bash /etc/slowdns/slowdns-ssl
+    bash /etc/VPSManager/SlowDNS/slowdns-ssl
 }
 
 Opcao3 () {
     clear
-    bash /etc/slowdns/slowdns-drop
+    bash /etc/VPSManager/SlowDNS/slowdns-drop
 }
 
 Opcao4 () {
     clear
-    bash /etc/slowdns/slowdns-socks
+    bash /etc/VPSManager/SlowDNS/slowdns-socks
 }
 
 
 Opcao5 () {
     clear
-    bash /etc/slowdns/slowdns-info
+    bash /etc/VPSManager/SlowDNS/slowdns-info
 }
 
 Opcao6 () {
     clear
-    bash /etc/slowdns/startdns
+    bash /etc/VPSManager/SlowDNS/startdns
 }
 
 Opcao7 () {
     clear
-    bash /etc/slowdns/restartdns
+    bash /etc/VPSManager/SlowDNS/restartdns
 }
 
 Opcao8 () {
     clear
-    bash /etc/slowdns/stopdns
+    bash /etc/VPSManager/SlowDNS/stopdns
 }
 
 Opcao9 () {
      clear
-    bash /etc/slowdns/stopdns
-    bash /etc/slowdns/remove-slow
+    bash /etc/VPSManager/SlowDNS/stopdns
+    bash /etc/VPSManager/SlowDNS/remove-slow
 }
 
 Opcao10 () {
@@ -103,7 +103,7 @@ Opcao10 () {
 
 Opcao11 () {
      clear
-    bash /etc/slowdns/remove-slow
+    bash /etc/VPSManager/SlowDNS/remove-slow
     echo -e "\033[0;31mSlowDNS Manager Desinstalado!\033[0m"
     sleep 2
     rm /bin/slowdns

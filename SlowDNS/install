@@ -41,8 +41,8 @@ echo -e "BAIXANDO DEPENDENCIAS..."
 echo ""
 fun_att () {
 apt install ncurses-utils -y
-mkdir /etc/slowdns
-cd /etc/slowdns
+mkdir /etc/VPSManager/SlowDNS
+cd /etc/VPSManager/SlowDNS
 wget https://github.com/fabricio94b/VPS-MANAGER/raw/main/SlowDNS/dns-server; chmod +x dns-server
 wget https://raw.githubusercontent.com/fabricio94b/VPS-MANAGER/main/SlowDNS/remove-slow; chmod +x remove-slow
 wget https://raw.githubusercontent.com/fabricio94b/VPS-MANAGER/main/SlowDNS/slowdns-info; chmod +x slowdns-info

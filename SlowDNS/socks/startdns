@@ -35,8 +35,8 @@ ip6tables -I INPUT -p udp --dport 5300 -j ACCEPT
 ip6tables -t nat -I PREROUTING -i $interface -p udp --dport 53 -j REDIRECT --to-ports 5300
 sleep 1  
 nameserver='1234'
-cd /etc/slowdns
-screen -dmS slowdns /etc/slowdns/dns-server -udp :5300 -privkey-file /root/server.key $nameserver 127.0.0.1:80
+cd /etc/VPSManager/SlowDNS
+screen -dmS slowdns /etc/VPSManager/SlowDNS/dns-server -udp :5300 -privkey-file /root/server.key $nameserver 127.0.0.1:80
 sleep 1
 }
 fun_bar 'fun_start'

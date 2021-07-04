@@ -41,10 +41,10 @@ rm -rf remove-slow; wget https://raw.githubusercontent.com/fabricio94b/VPS-MANAG
 sleep 2
 rm -rf /bin/slowdns && rm /root/remove-slow
 sleep 2
-rm remove-slow && rm -rf /etc/slowdns
+rm remove-slow && rm -rf /etc/VPSManager/SlowDNS
 }
 fun_bar 'fun_remove'
-rm -rf /etc/slowdns
+rm -rf /etc/VPSManager/SlowDNS
 echo ""
 echo -e "   \033[0;36mATUALIZANDO SCRIPT...\033[0m"
 echo ""

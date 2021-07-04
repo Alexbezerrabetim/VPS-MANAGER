@@ -48,4 +48,4 @@ sleep 1.5
 fun_bar 'fun_revdns'
 echo ""
 echo -e "SlowDNS Removido Com Sucesso!"
-rm -rf /etc/slowdns
+rm -rf /etc/VPSManager/SlowDNS
