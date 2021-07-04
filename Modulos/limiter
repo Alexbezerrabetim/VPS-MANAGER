@@ -1,9 +1,7 @@
 #!/bin/bash
 #====================================================
 #	SCRIPT: LIMITER VPS MANAGER
-#	DESENVOLVIDO POR:	CRAZY_VPN
-#	CONTATO TELEGRAM:	http://t.me/crazy_vpn
-#	CANAL TELEGRAM:	http://t.me/sshplus
+
 #====================================================
 clear
 database="/root/usuarios.db"
