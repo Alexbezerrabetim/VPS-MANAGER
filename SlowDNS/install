@@ -69,12 +69,6 @@ sleep 2
 }
 fun_bar 'fun_dnscf'
 clear
-echo -e "\033[1;31m════════════════════════════════════════════════════\033[0m"
-tput setaf 7 ; tput setab 4 ; tput bold ; printf '%40s%s%-12s\n' "INSTALADOR SLOWDNS MANAGER" ; tput sgr0
-echo -e "\033[1;31m════════════════════════════════════════════════════\033[0m"
-echo ""
-echo -e "          \033[1;33mINSTALAÇÃO CONCLUIDA!\033[0m          "
-echo ""
-echo -e "Para abrir o menu, use o comando: \033[1;33mslowdns\033[0m"
+slowdns
 cd
 rm install
