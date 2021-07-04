@@ -1660,7 +1660,7 @@ exit 0' >$RCLOCAL
 
 	SLOWDNS () {
     clear
-    bash /etc/slowdns/slowdns
+    slowdns
 }
 
 	x="ok"

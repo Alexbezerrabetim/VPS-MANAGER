@@ -40,6 +40,7 @@ echo -e "\033[0;36m#===================================================#\033[m"
     9) Opcao9 ;;
     10) Opcao10 ;;
     11) Opcao11 ;;
+    12) Opcao12 ;;
     0) Sair ;;
     *) "Opção inválida" ; echo ; slowdns ;;
     esac
@@ -105,6 +106,10 @@ Opcao11 () {
     echo -e "\033[0;31mSlowDNS Manager Desinstalado!\033[0m"
     sleep 2
     rm /bin/slowdns
+}
+Opcao12 () {
+     clear
+     menu
 }
 
 Sair() {
