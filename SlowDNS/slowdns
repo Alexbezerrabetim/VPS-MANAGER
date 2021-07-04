@@ -53,16 +53,8 @@ Opcao1 () {
 }
 
 Opcao2 () {
-
- ptdns=$(netstat -nplt | grep 'stunnel' | awk {'print $4'} | cut -d: -f2)
-            [[ $ptdns == '' ]] && {
-                echo -e "\n${RED}PRIMEIRO INSTALE O SSL TUNNEL !${SCOLOR}"
-                clear
-            bash /etc/slowdns/slowdns-ssl
-            }
-
-
-    
+    clear
+    bash /etc/slowdns/slowdns-ssl
 }
 
 Opcao3 () {
