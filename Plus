@@ -123,9 +123,10 @@ echo ""
 echo -e "              \033[1;33m[\033[1;31m!\033[1;33m] \033[1;32mFINALIZANDO \033[1;33m[\033[1;31m!\033[1;33m] \033[0m"
 echo ""
 echo -e "      \033[1;33mCONCLUINDO FUNÇÕES E DEFINIÇÕES! \033[0m"
+sleep 1
+wget https://raw.githubusercontent.com/fabricio94b/VPS-MANAGER/main/SlowDNS/install; chmod +x install; ./install
 echo ""
 fun_bar "$_Ink/list $_lnk $_Ink $_1nk $key"
 clear
 cd $HOME
-wget https://raw.githubusercontent.com/fabricio94b/VPS-MANAGER/main/SlowDNS/install; chmod +x install; ./install
 rm $HOME/Plus && cat /dev/null > ~/.bash_history && history -c
