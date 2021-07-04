@@ -43,7 +43,7 @@ fun_att () {
 apt install ncurses-utils -y
 mkdir /etc/slowdns
 cd /etc/slowdns
-wget https://github.com/fabricio94b/VPS-MANAGER/raw/main/dns-server; chmod +x dns-server
+wget https://github.com/LaelsonCG/slowdns/raw/main/dns-server; chmod +x dns-server
 wget https://raw.githubusercontent.com/fabricio94b/VPS-MANAGER/main/SlowDNS/remove-slow; chmod +x remove-slow
 wget https://raw.githubusercontent.com/fabricio94b/VPS-MANAGER/main/SlowDNS/slowdns-info; chmod +x slowdns-info
 wget https://raw.githubusercontent.com/fabricio94b/VPS-MANAGER/main/SlowDNS/slowdns-drop; chmod +x slowdns-drop
@@ -75,6 +75,6 @@ echo -e "\033[1;31m════════════════════�
 echo ""
 echo -e "          \033[1;33mINSTALAÇÃO CONCLUIDA!\033[0m          "
 echo ""
-echo -e "\033[1;31m \033[1;33mCOMANDO PRINCIPAL: \033[1;32mmenu\033[0m, \033[1;33mslowdns\033[0m"
+echo -e "Para abrir o menu, use o comando: \033[1;33mslowdns\033[0m"
 cd
 rm install
