@@ -1,6 +1,5 @@
 #! /bin/sh
 #-----------------------------
-# squid	open source by crazy.
 #-----------------------------
 
 NAME=squid3
