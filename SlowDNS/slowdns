@@ -25,7 +25,8 @@ echo -e "\033[0;36m#===================================================#\033[m"
     echo -e "\033[0;36m[09]\033[m | Remover SlowDNS"
     echo -e "\033[0;36m[10]\033[m | Atualizar/Reinstalar"
     echo -e "\033[0;36m[11]\033[m | Remover Script"
-    echo -e "\033[0;36m[00]\033[m | SAIR"
+    echo -e "\033[0;36m[12]\033[m | Menu"
+    echo -e "\033[0;36m[00]\033[m | Sair"
     echo ""
     echo -ne "\033[0;36mO que deseja fazer?:\0033[m " && read opcao
     case $opcao in
