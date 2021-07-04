@@ -1,12 +1,12 @@
 #!/bin/bash
 #====================================================
-#	SCRIPT: BOTSSH SSHPLUS MANAGER
+#	SCRIPT: BOTSSH VPS MANAGER
 #	DESENVOLVIDO POR:	CRAZY_VPN
 #	CONTATO TELEGRAM:	http://t.me/crazy_vpn
 #	CANAL TELEGRAM:	http://t.me/sshplus
 #====================================================
 clear
-[[ $(awk -F" " '{print $2}' /usr/lib/licence) != "@CRAZY_VPN" ]] && exit 0
+[[ $(awk -F" " '{print $2}' /usr/lib/licence) != "@vpn_manager" ]] && exit 0
 fun_bar() {
     comando[0]="$1"
     comando[1]="$2"
