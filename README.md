@@ -1,8 +1,6 @@
 __VPS-MANAGER__
 
 __Recomendado__
-- Ubuntu 14
-- Ubuntu 16
 - Ubuntu 18
 
 ![logo](https://github.com/fabricio94b/VPS-MANAGER/blob/main/home.png)
